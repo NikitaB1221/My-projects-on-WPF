@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "29_11_2022WPF/1.0.0": {
+        "runtime": {
+          "29_11_2022WPF.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "29_11_2022WPF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
