@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:_29_11_2022WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-
+    <!-- Class Work. Homework on line 225-->
     <!--<StackPanel Orientation="Vertical">
         <Border BorderBrush="DarkRed" BorderThickness="15" Margin="15">
             <WrapPanel Orientation="Horizontal">
