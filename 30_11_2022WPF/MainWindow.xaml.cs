@@ -29,8 +29,10 @@ namespace _30_11_2022WPF
         private void Num_Click(object sender, RoutedEventArgs e)
         {
             var NumButton = (Button)sender;
-            if (tbnow.Text == "0")
+            if (tbnow.Text == "0" && (string)NumButton.Content != ".")
                 tbnow.Text = $"{NumButton.Content}";
+            else if(tbnow.Text == "0" && (string)NumButton.Content == ".")
+                tbnow.Text += $"{NumButton.Content}";
             else
                 tbnow.Text += $"{NumButton.Content}";
 
@@ -38,7 +40,7 @@ namespace _30_11_2022WPF
 
         private void SymLeft_Click(object sender, RoutedEventArgs e)
         {
-            if (tbnow.Text != "")
+            if (tbnow.Text != "" || tbnow.Text != "0")
                 tbnow.Text = tbnow.Text.Remove(tbnow.Text.Length - 1);
         }
 
@@ -46,6 +48,85 @@ namespace _30_11_2022WPF
         {
             tbnow.Text = "0";
             tbpast.Text = "0";
+        }
+
+        private void SymCE_Click(object sender, RoutedEventArgs e)
+        {
+            tbnow.Text = "0";
+        }
+
+        private void SymOperator_Click(object sender, RoutedEventArgs e)
+        {
+            var OperatorButton = (Button)sender;
+            if (tbpast.Text == "" || tbpast.Text == "0")
+                tbpast.Text = $"{tbnow.Text}" + $" {OperatorButton.Content} ";
+            else
+                tbpast.Text = $"{tbpast.Text}" + $"{tbnow.Text}" + $" {OperatorButton.Content} ";
+            
+            tbnow.Text = "0";
+        }
+
+        private void SymEquals_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                tbpast.Text = $"{tbpast.Text}" + $"{tbnow.Text}";
+                tbnow.Text = "0";
+                calculate();
+            }
+            catch (Exception exc)
+            {
+                tbpast.Text = "Error!";
+            }
+        }
+
+        private void calculate()
+        {
+            String op;
+            int iOp = 0;
+            if (tbpast.Text.Contains("+"))
+            {
+                iOp = tbpast.Text.IndexOf("+");
+            }
+            else if (tbpast.Text.Contains("-"))
+            {
+                iOp = tbpast.Text.IndexOf("-");
+            }
+            else if (tbpast.Text.Contains("*"))
+            {
+                iOp = tbpast.Text.IndexOf("*");
+            }
+            else if (tbpast.Text.Contains("/"))
+            {
+                iOp = tbpast.Text.IndexOf("/");
+            }
+            else
+            {
+                //error    
+            }
+
+            op = tbpast.Text.Substring(iOp, 1);
+            double op1 = Convert.ToDouble(tbpast.Text.Substring(0, iOp));
+            double op2 = Convert.ToDouble(tbpast.Text.Substring(iOp + 1, tbpast.Text.Length - iOp - 1));
+
+            tbpast.Text = "0";
+
+            if (op == "+")
+            {
+                tbnow.Text = $"{op1 + op2}";
+            }
+            else if (op == "-")
+            {
+                tbnow.Text = $"{op1 - op2}";
+            }
+            else if (op == "*")
+            {
+                tbnow.Text = $"{op1 * op2}";
+            }
+            else
+            {
+                tbnow.Text = $"{op1 / op2}";
+            }
         }
 
         /*Class work */

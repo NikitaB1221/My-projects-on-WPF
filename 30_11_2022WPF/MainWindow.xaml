@@ -190,7 +190,6 @@
         <Button x:Name="SymDot"
             Grid.Column="0" Grid.Row="6" Margin="3"
             Content="." 
-            Click="Num_Click"
             />
 
         <Button x:Name="Num0"
@@ -201,7 +200,7 @@
 
         <Button x:Name="SymEquals"
             Grid.Column="2" Grid.Row="6" Margin="3" Grid.ColumnSpan="2"
-            Content="="
+            Content="=" Click="SymEquals_Click"
             />
 
         <Button x:Name="Num1"
@@ -225,6 +224,7 @@
         <Button x:Name="SymPlus"
             Grid.Column="3" Grid.Row="5" Margin="3"
             Content="+"
+            Click="SymOperator_Click"
             />
 
         <Button x:Name="Num4"
@@ -247,6 +247,7 @@
         <Button x:Name="SymMinus"
             Grid.Column="3" Grid.Row="4" Margin="3"
             Content="-"
+            Click="SymOperator_Click"
             />
 
         <Button x:Name="Num7"
@@ -270,26 +271,31 @@
         <Button x:Name="SymMult"
             Grid.Column="3" Grid.Row="3" Margin="3"
             Content="*"
+            Click="SymOperator_Click"
             />
 
         <Button x:Name="SymCE"
             Grid.Column="0" Grid.Row="2" Margin="3"
-            Content="CE"
+            Content="CE" 
+            Click="SymCE_Click"
             />
 
         <Button x:Name="SymC"
             Grid.Column="1" Grid.Row="2" Margin="3"
-            Content="C" Click="SymC_Click"
+            Content="C"
+            Click="SymC_Click"
             />
 
         <Button x:Name="SymLeft"
             Grid.Column="2" Grid.Row="2" Margin="3"
-            Content="&lt;" Click="SymLeft_Click"
+            Content="&lt;"
+            Click="SymLeft_Click"
             />
 
         <Button x:Name="SymDiv"
             Grid.Column="3" Grid.Row="2" Margin="3"
             Content="/"
+            Click="SymOperator_Click"
             />
 
         <TextBox x:Name="tbnow"
