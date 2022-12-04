@@ -1,0 +1,64 @@
+﻿<Window x:Class="_3_12_2022WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3_12_2022WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="240" Width="440">
+
+    <!--<Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock>The first row of a grid.</TextBlock>
+
+
+        <Viewbox Grid.Row="1" HorizontalAlignment="Left"  MaxHeight="500">
+
+            <Canvas Width="300" Height="300">
+                <Ellipse Fill="Red" Stroke="Gray" Canvas.Left="50"  Canvas.Top="50"
+               Width="140" Height="130" HorizontalAlignment="Center" VerticalAlignment="Top"></Ellipse>
+                <Rectangle Fill="White" Stroke="White" Canvas.Left="86"  Canvas.Top="100"                 
+                 Width="68" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top"></Rectangle>
+            </Canvas>
+        </Viewbox>
+    </Grid>-->
+
+    <!--<StackPanel>
+        <Button Height="350" Width="350">
+            <Button.BitmapEffect>
+                <BlurBitmapEffect Radius ="0" x:Name="eff1"/>
+            </Button.BitmapEffect>
+            <Image Height="350" Width="350" Source="C:\Users\nikit\source\repos\3_12_2022WPF\3_12_2022WPF\1.1.1.PNG"/>
+        </Button>
+        <Slider Width="350" Maximum="50" ValueChanged="Slider_ValueChanged"/>
+    </StackPanel>-->
+
+    <Grid Margin="5,5,10,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <Viewbox Grid.Row="1" MinHeight="200" HorizontalAlignment="Center" Margin="10,10,10,10">
+
+            <Canvas MinWidth="240" MinHeight="200" Width="429" Height="204">
+
+                <Rectangle Fill="#F65314" Stroke="White" MinWidth="50" MinHeight="50" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="70"/>
+                <Rectangle Fill="#7CBB00" Stroke="White" MinWidth="50" MinHeight="50" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="125"/>
+                <Rectangle Fill="#FFBB00" Stroke="White" MinWidth="50" MinHeight="50" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="125" Canvas.Top="55"/>
+                <Rectangle Fill="#00A1F1" Stroke="White" MinWidth="50" MinHeight="50" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="55" Canvas.Left="70"/>
+
+                <TextBlock Canvas.Left="192" Canvas.Top="32"  Text="Microsoft" FontSize="36" Foreground="Gray"/>
+
+            </Canvas>
+        </Viewbox>
+    </Grid>
+
+</Window>
+
+    
